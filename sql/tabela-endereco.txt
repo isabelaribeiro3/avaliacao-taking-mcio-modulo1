@@ -1,0 +1,19 @@
+Endereço
+
+CREATE TABLE endereco_isabela (
+		endereco_id INT NOT NULL AUTO_INCREMENT,
+		tipo VARCHAR(10) NOT NULL ,
+		logradouro VARCHAR (250) NOT NULL ,
+		numero VARCHAR(10) NOT NULL ,
+		complemento VARCHAR(100) NOT NULL,
+		cep numeric NOT NULL,
+		cidade VARCHAR(250) NOT NULL,
+		estado CHAR(2) NOT NULL,
+		pessoa_id INT NOT NULL,
+		PRIMARY KEY(endereco_id),
+		FOREIGN KEY(pessoa_id) 
+		REFERENCES pessoa_isabela(pessoa_id)
+	);
+
+Consulta para trazer as informações da tabela:
+select *from endereco_isabela;    
