@@ -1,0 +1,17 @@
+Juntando as tabelas:
+select
+	pessoa_isabela.pessoa_id,
+	pessoa_isabela.nome,
+	pessoa_isabela.cpf,
+	pessoa_isabela.idade,
+	pessoa_isabela.sexo,
+	endereco_isabela.tipo,
+	endereco_isabela.logradouro,
+	endereco_isabela.numero,
+	endereco_isabela.complemento,
+	endereco_isabela.cep,
+	endereco_isabela.cidade,
+	endereco_isabela.estado 
+from
+pessoa_isabela
+	inner join endereco_isabela on pessoa_isabela.pessoa_id = endereco_isabela.pessoa_id;
